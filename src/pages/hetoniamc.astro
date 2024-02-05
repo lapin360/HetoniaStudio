@@ -1,0 +1,26 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/MiniHero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+import { Icon } from 'astro-icon/components'
+---
+
+<DefaultLayout title="Hétonia MC" icon="/logomc.png">
+  <Hero />
+  <section class="">
+    <div class="container">
+      <h2 class="text-4xl my-4 flex"> <Icon name="ion:information-circle" class="translate-y-1 mx-2"/> A propos</h2>
+      <p>
+        Hétonia est un serveur Minecraft Français créer en 2021 par "lelapin2" qui se nommé a l'époque "sunwith". 
+        Hétonia est un serveur de Type Surive Customs et Mini-jeux.  
+      </p>
+      <h2 class="text-4xl my-4 flex"><Icon name="ion:newspaper" class="translate-y-1 mx-2"/>Lisence</h2>
+      <p>
+        HétoniaMC est sous la lisence [ALL] et copyright par Hétonia Studio et DreamClouds Development.
+      </p>
+    </div>
+  </section>
+
+</DefaultLayout>

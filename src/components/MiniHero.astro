@@ -1,0 +1,47 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const { src = '/logomc.png' } = Astro.props
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+      <div class="flex flex-col items-center gap-8 md:items-start">
+        <h1 class="text-center text-4xl md:text-left lg:text-6xl">
+          <slot><span class="text-gradient">Hétonia MC</span></slot>
+        </h1>
+        <div class="flex flex-col gap-3 min-[500px]:flex-row">
+          <a class="button has-icon" href="https://hetonia.fr">
+            <Icon name="ion:globe-sharp" />
+            Site Web
+          </a>
+          <a
+            class="button has-icon color-secondary"
+            href="https://dsc.gg/hetonia"
+          >
+            <Icon name="ion:logo-discord" />
+            Discord
+          </a>
+        </div>
+      </div>
+      <img class="right-0 hidden lg:block h-60 justify-self-end" src={src} alt="" decoding="async" />
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  :global(.darkmode .text-gradient) {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
